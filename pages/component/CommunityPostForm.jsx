@@ -1,7 +1,8 @@
-import { ArrowBack, Cancel, Public } from "@material-ui/icons";
 import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { user } from "../../constants";
+import { IoMdArrowBack } from "react-icons/io";
+import { MdOutlineCancel, MdPublic } from "react-icons/md";
 
 export default function CommunityPostForm({ id }) {
   const data = {
@@ -54,7 +55,7 @@ export default function CommunityPostForm({ id }) {
   return (
     <form className="text-light-1">
       <div onClick={() => router.push("/communities")}>
-        <ArrowBack />
+        <IoMdArrowBack />
       </div>
 
       <div class="flex items-start gap-2.5 mt-7">
@@ -68,7 +69,7 @@ export default function CommunityPostForm({ id }) {
               public
             </span>
             <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
-              <Public />
+              <MdPublic />
             </span>
           </div>
           <p class="text-sm font-normal text-gray-900 dark:text-white">
@@ -286,7 +287,7 @@ export default function CommunityPostForm({ id }) {
                 className="absolute top-1 right-2 bg-red-500 rounded-full"
                 onClick={() => setPosts({ ...posts, img: null })}
               >
-                <Cancel />
+                <MdOutlineCancel />
               </div>
             </div>
           )}

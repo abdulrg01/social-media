@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { Cancel, CancelScheduleSend } from "@material-ui/icons";
 import Wrapper from "../component/Wrapper";
 import { user } from "../../constants";
 import Link from "next/link";
+import { MdOutlineCancel, MdCancelScheduleSend } from "react-icons/md";
 
 export default function index() {
   const [posts, setPosts] = useState({
@@ -33,7 +33,7 @@ export default function index() {
           className="text-light-2 cursor-pointer"
           onClick={() => router.push("/communities")}
         >
-          <CancelScheduleSend />
+          <MdCancelScheduleSend />
         </div>
         <div>
           <h1 className=" text-light-2 text-small-semibold">Create Group</h1>
@@ -91,7 +91,7 @@ export default function index() {
               className="absolute top-1 right-2 bg-red-500 rounded-full"
               onClick={() => setPosts({ ...posts, img: null })}
             >
-              <Cancel />
+              <MdOutlineCancel />
             </div>
           </div>
         ) : (

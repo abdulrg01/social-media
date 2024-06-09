@@ -1,8 +1,8 @@
-import { Cancel } from "@material-ui/icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 import { user } from "../../constants";
+import { MdOutlineCancel } from "react-icons/md";
 
 export default function CommentForm() {
   const [posts, setPosts] = useState({
@@ -237,7 +237,7 @@ export default function CommentForm() {
                   className="absolute top-1 right-2 bg-red-500 rounded-full"
                   onClick={() => setPosts({ ...posts, img: null })}
                 >
-                  <Cancel />
+                  <MdOutlineCancel />
                 </div>
               </div>
             )}

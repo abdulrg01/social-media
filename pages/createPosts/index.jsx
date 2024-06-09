@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Wrapper from "../component/Wrapper";
 import { useRouter } from "next/router";
-import { Cancel } from "@material-ui/icons";
+import { MdOutlineCancel } from "react-icons/md";
 import { user } from "../../constants";
 import Link from "next/link";
 
@@ -420,7 +420,7 @@ export default function index() {
                     className="absolute top-1 right-2 bg-red-500 rounded-full"
                     onClick={() => setPosts({ ...posts, img: null })}
                   >
-                    <Cancel />
+                    <MdOutlineCancel />
                   </div>
                 </div>
               )}
